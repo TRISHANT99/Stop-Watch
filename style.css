@@ -1,0 +1,202 @@
+/* .appName {
+  text-decoration: none;
+  margin-top: -15px;
+  margin-left: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  left: 3%;
+}
+.tonmoy {
+  text-decoration: none;
+  color: rgb(140, 155, 180);
+  font-size: 14px;
+  position: absolute;
+  left: 3.7%;
+  bottom: 6%;
+}
+.tonmoy:hover {
+  transform: scale(1.02);
+  color: rgb(140, 155, 180);
+}
+.appName:hover {
+  transform: scale(1.04);
+  color: white;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.follow {
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  left: 10%;
+  bottom: 3%;
+  text-decoration: none;
+  text-align: center;
+}
+.flw {
+  background-color: #47cf73;
+  outline: none;
+  color: black;
+  width: 60px;
+  padding: 0;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.plus {
+  font-weight: bold;
+  padding: 0;
+}
+.flw:hover {
+  color: white;
+}
+.btn {
+  display: inline;
+}
+.one {
+  margin-left: 300px;
+  text-decoration: none;
+}
+.two {
+  margin-left: -160px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.three {
+  margin-left: -160px;
+  color: black;
+  text-decoration: none;
+}
+.four {
+  margin-left: -160px;
+  font-weight: bold;
+  
+}
+.four > a{
+    text-decoration: none;
+    color: white;
+}
+.one > a{
+    text-decoration: none;
+}
+.two > a{
+    text-decoration: none;
+    color: white;
+}
+.three > a{
+    text-decoration: none;
+    color: black;
+}
+.four:hover {
+  background-color: rgb(75, 84, 100);
+}
+.one:hover {
+  background-color: rgb(75, 84, 100);
+}
+.two:hover {
+  background-color: rgb(75, 84, 100);
+}
+.three:hover {
+  background-color: rgb(49, 216, 71);
+}
+.three > a:hover{
+    color: white;
+} */
+/* @media (max-width:1350px) {
+
+
+    .appName {
+        font-size: 15px;
+      }
+      .tonmoy {
+        font-size: 10px;
+      }
+      .follow {
+        font-size: 6px;
+      }
+      .flw {
+        font-size: 6px;
+      }
+      .plus {
+      
+        padding: 0;
+      } 
+    
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.stopwatch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #222242;
+    height: 100vh;
+    width: 100%;
+}
+.display{
+  margin-left: 145px;
+  transform: translate(-50%,-50%);
+}
+.display p{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    color: #5f44d6;
+    z-index: 9999;
+    font-size: 43px;
+}
+.display p::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #151538;
+    z-index: -1;
+    border-radius: 50%;
+	  left: -10%;
+    top: -115%;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    text-align: center;
+}
+@keyframes shine{
+    0%,100%{
+        box-shadow: 0px 0px 32px -12px rgba(33, 160, 40, .5);
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px rgba(33, 160, 40, .5);
+    }
+}
+.controls{
+  margin-top: 45px;
+}
+.controls > button{
+    background-color: #222242;
+    padding: 10px 38px;
+    border: 1px solid #A9A9A9;
+    border-radius: 28px;
+    color: #fff;
+    transition: all .2s ease;
+    outline: 0;
+}
+.controls button:not(:last-child){
+    margin-right: 25px;
+}
+.controls button:hover,
+.controls button:focus
+{
+    border-color: #F6B400;
+    color: #F6B400;
+    box-shadow: 0px 4px 27px -12px #F6B400;
+}
